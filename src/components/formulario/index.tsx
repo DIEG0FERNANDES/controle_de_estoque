@@ -1,18 +1,20 @@
+import { useState } from "react";
+
 import styles from "./styles.module.css";
-const Formulario = () => {
-  const [codigo, setCodigo] = useState('');
-  const [descricao, setDescricao] = useState('');
-  const [preco,setPreco] = useState('');
-  const [quantidadeProdutos, setQuantidadeProdutos] = useState('');
+const Formulario = ({ addProdutos }) => {
+  const [codigo, setCodigo] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [preco, setPreco] = useState("");
+  const [quantidadeProdutos, setQuantidadeProdutos] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDeafult();
-    addProdutos({codigo, descricao,preco,quantidadeProdutos});
-    setCodigo();
-    setDescricao();
-    setPreco();
-    setQuantidadeProdutos();
-  }
+    addProdutos({ codigo, descricao, preco, quantidadeProdutos });
+    setCodigo("");
+    setDescricao("");
+    setPreco("");
+    setQuantidadeProdutos("");
+  };
 
   return (
     <div>

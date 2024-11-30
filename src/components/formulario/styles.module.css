@@ -23,3 +23,10 @@
   box-shadow: 8px 8px 8px #202020;
   font-family: "bold";
 }
+
+.listaProdutos {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
